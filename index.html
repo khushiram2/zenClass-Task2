@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Differences between HTTP/1.1 and HTTP/2</title>
+</head>
+<body>
+  <div style="max-width: 800px; margin: 50px auto; padding: 30px; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+    <h1 style="font-size: 28px; color: #333; margin-bottom: 20px;">Differences between HTTP/1.1 and HTTP/2</h1>
+    <div style="margin-bottom: 40px;">
+      <h2 style="font-size: 22px; color: #007bff; margin-bottom: 10px;">HTTP/1.1:</h2>
+      <ul style="list-style-type: none; padding: 0;">
+        <li><span style="font-weight: bold; margin-right: 5px;">1.</span> HTTP/1.1 is slower than HTTP/2 because HTTP/1.1 loads data one after another. On the other hand, HTTP/2 uses one TCP connection and divides the data into multiple streams. This allows simultaneous loading of data, avoiding blocking issues.</li>
+        <li><span style="font-weight: bold; margin-right: 5px;">2.</span> Both HTTP/1.1 and HTTP/2 compress data in HTTP packets to speed up data transfer. However, HTTP/2 uses a more advanced compression called HPACK, which results in smaller header packets compared to HTTP/1.1. This reduces the overall data size and makes HTTP/2 faster.</li>
+        <li><span style="font-weight: bold; margin-right: 5px;">3.</span> HTTP/2 offers weighted prioritization, allowing developers to prioritize requests for resources. In HTTP/1.1, requests were handled in the order received, but HTTP/2's prioritization feature allows for more efficient resource allocation.</li>
+      </ul>
+    </div>
+    <div style="margin-bottom: 40px;">
+      <h2 style="font-size: 22px; color: #007bff; margin-bottom: 10px;">Objects and their representation in JavaScript:</h2>
+      <ul style="list-style-type: none; padding: 0;">
+        <li><span style="font-weight: bold; margin-right: 5px;">1.</span> Objects come under composite data types in JavaScript. They can store multiple values in key-value pairs, enclosed in curly braces ({})</li>
+        <li><span style="font-weight: bold; margin-right: 5px;">2.</span> Object representation in JavaScript is done by defining variables and assigning key-value pairs to them:</li>
+        <pre style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+var obj = {
+  Name: "xyz",
+  releaseYear: "20**",
+  geners: ["romance", "action", "sci_fi"]
+};
+        </pre>
+        <li><span style="font-weight: bold; margin-right: 5px;">3.</span> To add a new key-value pair to an object, you can simply assign a value to the corresponding key:</li>
+        <pre style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+obj.ranking = 4;
+        </pre>
+        <li><span style="font-weight: bold; margin-right: 5px;">4.</span> To update the value of an existing key, you can assign a new value to it:</li>
+        <pre style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+obj.ranking = 14;
+        </pre>
+        <li><span style="font-weight: bold; margin-right: 5px;">5.</span> To delete a key-value pair from an object, you can use the `delete` keyword:</li>
+        <pre style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+delete obj.releaseYear;
+        </pre>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
